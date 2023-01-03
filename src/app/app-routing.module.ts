@@ -5,7 +5,9 @@ import { ContactsPageComponent } from './pages/contacts-page/contacts-page.compo
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
-
+// resolver
+import { Resolve } from '@angular/router';
+import { HomeResolver } from './home.resolver';
 
 // conjunto de rutas que podemos navegar dentro de la app 
 const routes: Routes = [
@@ -24,6 +26,9 @@ const routes: Routes = [
      // donde se quiere navegar
    path: 'home',
    component: HomePageComponent,
+   resolve: {
+    message: HomeResolver
+   },
   //  rutas hijas de home
    children:[
     {
