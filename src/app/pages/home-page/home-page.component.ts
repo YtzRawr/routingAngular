@@ -14,5 +14,8 @@ export class HomePageComponent implements OnInit{
     // navigate
     // this.data = this.route.snapshot.data;
   }
+  navegarAContacts(): void {
+      // this.router.navigate('contacts');
+  }
 
 }

@@ -49,11 +49,11 @@ const routes: Routes = [
 //   component: ContactsPageComponent 
   
 //  },
-//  {
-//   // --> pasar parametros por ruta
-//   path: 'contacts/:id',
-//   component: ContactsDetailPageComponent 
-//  }
+ {
+  // --> pasar parametros por ruta
+  path: 'contacts/:id',
+  component: ContactsDetailPageComponent 
+ },
 
 {
   path: '**',
