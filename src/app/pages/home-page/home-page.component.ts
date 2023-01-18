@@ -8,14 +8,14 @@ import {  Router } from '@angular/router';
 })
 export class HomePageComponent implements OnInit{
   data:any;
-
+// se inyecta el router en el constructor
   constructor(private router: Router){}
   ngOnInit(): void {
     // navigate
     // this.data = this.route.snapshot.data;
   }
   navegarAContacts(): void {
-      // this.router.navigate('contacts');
+      this.router.navigate(['contacts']);
   }
 
 }

@@ -1,6 +1,7 @@
 <div>
   <span>Routing/ navegacion entre paginas</span>
 </div>
+<button *ngIf="token" (click)="logout()">Logout</button>
 <div class="content" role="main">
   <!-- remplaza los datos cargados  -->
   <!-- renderiza el componente que indiquie el Routing module a partir de la ruta URL activa -->
