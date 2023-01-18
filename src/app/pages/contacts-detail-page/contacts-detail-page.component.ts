@@ -20,6 +20,8 @@ this.route.params.subscribe(
       this.id = params.id;
     }
   }
-)
+);
+// acceder a los parametros del padre
+// this.route.parent?.params
   }
 }

@@ -8,6 +8,7 @@ import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.com
 // resolver
 import { Resolve } from '@angular/router';
 import { HomeResolver } from './home.resolver';
+import { AuthGuard } from './guards/auth.guard';
 
 // conjunto de rutas que podemos navegar dentro de la app 
 const routes: Routes = [
@@ -41,7 +42,10 @@ const routes: Routes = [
 
  {
   path: 'contacts',
-  component: ContactsPageComponent
+  component: ContactsPageComponent,
+  // se concatenan con comas
+  canActivate: [ AuthGuard]
+
  },
 //  {
 //   // -> pasar parametros por ruta
@@ -52,7 +56,8 @@ const routes: Routes = [
  {
   // --> pasar parametros por ruta
   path: 'contacts/:id',
-  component: ContactsDetailPageComponent 
+  component: ContactsDetailPageComponent,
+  canActivate: [AuthGuard]
  },
 
 {
