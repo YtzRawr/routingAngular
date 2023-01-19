@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {  Router } from '@angular/router';
+import {  NavigationExtras, Router } from '@angular/router';
 import { IContacto } from 'src/app/models/contact.interface';
 
 @Component({
@@ -8,11 +8,15 @@ import { IContacto } from 'src/app/models/contact.interface';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit{
+  token: string | null = null;
   contactoSeleccionado : IContacto | undefined;
   data:any;
 // se inyecta el router en el constructor
   constructor(private router: Router){}
   ngOnInit(): void {
+    //comprobar si existe el token en el sessionstorage
+    this.token = sessionStorage.getItem('token') ;
+
     // navigate
     // this.data = this.route.snapshot.data;
     // leemos el estado del historial de la navegacion
@@ -23,7 +27,13 @@ export class HomePageComponent implements OnInit{
     console.log(history.state.data);
   }
   navegarAContacts(): void {
-      this.router.navigate(['contacts']);
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        // order: ''
+        genero: 'masculino'
+      }
+    }
+      this.router.navigate(['contacts'], navigationExtras);
   }
 
 }

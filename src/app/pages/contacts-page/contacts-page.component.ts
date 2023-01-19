@@ -14,19 +14,22 @@ export class ContactsPageComponent  implements OnInit{
     id: 0,
     nombre: 'Matias',
     apellidos: 'Pizarro',
-    email: 'matias@gmail.com'
+    email: 'matias@gmail.com',
+    genero: 'masculino'
   },
   {
     id: 1,
     nombre: 'Ignacio',
     apellidos: 'Pizarro',
-    email: 'ignacio@gmail.com'
+    email: 'ignacio@gmail.com',
+    genero: 'masculino'
   },
   {
     id: 2,
     nombre: 'Juan',
     apellidos: 'Pizarro',
-    email: 'juan@gmail.com'
+    email: 'juan@gmail.com',
+    genero: 'masculino'
   }
 
 ]
