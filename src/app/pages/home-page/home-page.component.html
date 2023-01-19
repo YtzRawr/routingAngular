@@ -1,7 +1,8 @@
 <h1>Home page!</h1>
 <h3>Bienvenidos!</h3>
+<h4 *ngIf="contactoSeleccionado">Has seleccionado a: {{contactoSeleccionado.nombre}}</h4>
 <!-- hacer un login -->
 <button routerLink="/login">Iniciar sesion</button><br>
 <!-- contactos -->
 <button (click)="navegarAContacts()">Ver tus contactos</button>
-<p>mensaje: {{ data.message}}</p>
+<!-- <p>mensaje: {{ data.message}}</p> -->

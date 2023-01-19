@@ -32,3 +32,7 @@ export class AppComponent implements OnInit {
   }
 
 }
+// 1 A traves de inputs y outputs
+// 2 A traves de inyeccion de constructores de componentes hijos @ViewChild, @ContentChild o @ContentChilden
+// 3 A traves de servicios (Promesas y observables, etc ) --> NGRX (Gestion del estado de la aplicacion)
+// 4 A traves de parametros entre rutas 
