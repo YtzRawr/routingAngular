@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationExtras, Router } from '@angular/router';
+import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 import { IContacto } from 'src/app/models/contact.interface';
 
 @Component({
@@ -9,6 +9,7 @@ import { IContacto } from 'src/app/models/contact.interface';
 })
 export class ContactsPageComponent  implements OnInit{
 
+  // la lista deberia de estar desde otro servicio
   listaContactos: IContacto [] = [
     {
     id: 0,
@@ -30,12 +31,25 @@ export class ContactsPageComponent  implements OnInit{
     apellidos: 'Pizarro',
     email: 'juan@gmail.com',
     genero: 'masculino'
+  },
+  {
+    id: 3,
+    nombre: 'Catalina',
+    apellidos: 'Pizarro',
+    email: 'catalina@gmail.com',
+    genero: 'femenino'
   }
 
 ]
 
-  constructor (private router: Router){}
+  constructor (private router: Router, private route: ActivatedRoute){}
   ngOnInit(): void {
+// obtenemos los queryparams
+this.route.queryParams.subscribe((params: any) =>{
+  console.log('QueryParams: ',params.genero);
+})
+
+
   }
 
   // paso de informacion entre componentes a traves del ESTADO

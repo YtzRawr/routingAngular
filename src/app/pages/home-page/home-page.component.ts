@@ -30,7 +30,7 @@ export class HomePageComponent implements OnInit{
     let navigationExtras: NavigationExtras = {
       queryParams: {
         // order: ''
-        genero: 'masculino'
+        genero: 'todos',
       }
     }
       this.router.navigate(['contacts'], navigationExtras);
