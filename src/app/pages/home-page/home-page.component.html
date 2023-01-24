@@ -15,6 +15,7 @@
 <!-- <p>mensaje: {{ data.message}}</p> -->
 <div>
 <p><strong>Filtros:</strong></p>
-<a routerLink="['/contacts']" [queryParams]="{genero: 'femenino'}">Amigas</a><br>
-<a routerLink="['/contacts']" [queryParams]="{genero: 'masculino'}">Amigos</a>
+<!-- cambio en el routerlink -->
+<a routerLink="/contacts" [queryParams]="{genero: 'femenino'}">Amigas</a><br><br>
+<a routerLink="/contacts" [queryParams]="{genero: 'masculino'}">Amigos</a>
 </div>

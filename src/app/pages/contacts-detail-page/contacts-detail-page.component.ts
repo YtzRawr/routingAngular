@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 // el contenido que hay en la URL
 import { ActivatedRoute } from '@angular/router';
+import { IContacto } from 'src/app/models/contact.interface';
 @Component({
   selector: 'app-contacts-detail-page',
   templateUrl: './contacts-detail-page.component.html',
@@ -9,6 +10,13 @@ import { ActivatedRoute } from '@angular/router';
 export class ContactsDetailPageComponent implements OnInit{
   // el id que se captura
   id: any | undefined;
+  contacto: IContacto = {
+    id: 0,
+    nombre: '',
+    apellidos: '',
+    email: '',
+    genero: 'mujer'
+  };
   constructor (private route: ActivatedRoute){
   }
   ngOnInit(): void {
@@ -23,5 +31,9 @@ this.route.params.subscribe(
 );
 // acceder a los parametros del padre
 // this.route.parent?.params
+// vamos a leer tambien del state del contacto
+if (history.state.data) {
+  this.contacto = history.state.data;
+}
   }
 }

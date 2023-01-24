@@ -1,9 +1,9 @@
-<h1>Your contact page!</h1>
+<h1>Tus contactos!</h1>
 
 <!-- listar los contactos y poder navegar a la hora de pinchar en uno de ellos -->
 <div *ngFor="let contacto of listaContactos; let i=index">
-    <div routerLink="{{contacto.id}}">
-        <h5>{{contacto.nombre}}</h5>
-        <button (click)="volverAHome(contacto)">Enviar contacto</button>
+    <div routerLink="{{contacto.id}}" [state]="{data: contacto}">
+        <h5 class="contacto">{{contacto.nombre}}</h5>
+        <button (click)="volverAHome(contacto)">Seleccionar como amigo invisible</button>
     </div>
 </div>
