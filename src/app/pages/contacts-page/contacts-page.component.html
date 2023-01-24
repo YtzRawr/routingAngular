@@ -7,3 +7,10 @@
         <button (click)="volverAHome(contacto)">Seleccionar como amigo invisible</button>
     </div>
 </div>
+<ng-container *ngIf="filtroGenero == 'femenino' || filtroGenero == 'masculino'; else completo">
+<!-- <p>Mostrando lista filtrada</p> -->
+<p>Mostrando amigos "{{filtroGenero}}"</p>
+</ng-container>
+<ng-template #completo>
+<p>Mostrando lista de contactos completa</p>
+</ng-template>
