@@ -27,7 +27,7 @@ export class LoginPageComponent implements OnInit {
         if (response.token) {
           sessionStorage.setItem('token', response.token);
           // que navege a la lista de contactos
-          this.router.navigate(['contacts']);
+          this.router.navigate(['home']);
         }
       },
       (error) => console.error(`Ha habido un error al hacer login: ${error}`),
