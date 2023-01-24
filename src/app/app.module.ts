@@ -9,6 +9,7 @@ import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.com
 import { ContactsPageComponent } from './pages/contacts-page/contacts-page.component';
 import { ContactsDetailPageComponent } from './pages/contacts-detail-page/contacts-detail-page.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
     HttpClientModule
   ],
   providers: [],
