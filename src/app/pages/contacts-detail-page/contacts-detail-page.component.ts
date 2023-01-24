@@ -17,6 +17,7 @@ export class ContactsDetailPageComponent implements OnInit{
     email: '',
     genero: 'mujer'
   };
+  filtroPrevio: string = 'todos';
   constructor (private route: ActivatedRoute){
   }
   ngOnInit(): void {
@@ -34,6 +35,9 @@ this.route.params.subscribe(
 // vamos a leer tambien del state del contacto
 if (history.state.data) {
   this.contacto = history.state.data;
+}
+if (history.state.filtro) {
+  this.filtroPrevio = history.state.filtro;
 }
   }
 }
