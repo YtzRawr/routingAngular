@@ -26,7 +26,7 @@ export class LoginPageComponent implements OnInit {
       (response) =>{
         if (response.token) {
           sessionStorage.setItem('token', response.token);
-          // que navege a la lista de contactos
+          // que navege a la home
           this.router.navigate(['home']);
         }
       },

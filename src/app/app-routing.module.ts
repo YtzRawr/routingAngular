@@ -37,7 +37,9 @@ const routes: Routes = [
       path: 'homehijo',
       component: HomePageComponent
     }
-   ]
+   ],
+  //  de la ruta home
+   canActivate: [AuthGuard]
   },
 
  {
